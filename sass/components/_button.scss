@@ -1,0 +1,72 @@
+// Buttons
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10rem;
+    transition: all 0.2s;
+
+    // Changes for button element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    text-decoration: none;
+    /* transform: translateY(-0.3rem); */
+    box-shadow: 0 1rem 2rem rgba($black, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.4);
+  }
+
+  &--light {
+    color: $white;
+    background-color: $dark-orange;
+  }
+
+  &--green {
+    color: $white;
+    background-color: $green;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    // text-transform: uppercase;
+    color: $green;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $green;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $green;
+    color: $white;
+    box-shadow: 0 1rem 2rem rgba($black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0.5rem 2rem rgba($black, 0.15);
+    transform: translateY(0);
+  }
+}
